@@ -10,21 +10,6 @@ interface TeamMember {
 }
 
 const AboutPage: React.FC = () => {
-  const [storyRef, storyInView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const [missionRef, missionInView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const [teamRef, teamInView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   const teamMembers: TeamMember[] = [
     {
       name: 'Tamim',
@@ -63,25 +48,6 @@ const AboutPage: React.FC = () => {
       imageFileName: 'Nipun.png',
     },
   ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  };
 
   return (
     <div className="py-16">

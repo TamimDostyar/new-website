@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  EnvelopeIcon, 
-  PhoneIcon, 
-  MapPinIcon,
-  PaperAirplaneIcon
+  EnvelopeIcon 
 } from '@heroicons/react/24/outline';
 
 const ContactPage = () => {
@@ -70,7 +67,21 @@ const ContactPage = () => {
           </p>
         </motion.div>
 
-        {/* Contact form and info would go here */}
+        {/* Placeholder for contact form - we'll implement this when ready */}
+        <div className="max-w-3xl mx-auto bg-darker p-8 rounded-lg border border-purple-900">
+          <p className="text-center text-gray-300 mb-4">
+            Our contact form is coming soon. In the meantime, please reach out to us via email.
+          </p>
+          <div className="text-center">
+            <a 
+              href="mailto:info@vantixai.com" 
+              className="inline-flex items-center text-primary hover:text-purple-400"
+            >
+              <EnvelopeIcon className="h-5 w-5 mr-2" />
+              info@vantixai.com
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
