@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-gray-200 bg-deepPurple;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white;
+  }
+  
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-darker;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-purple-800 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
+  }
+  
+  .scrollbar-hide {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.purple.800') theme('colors.darker');
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-md transition-all duration-300 font-medium;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-purple-800 shadow-md hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-purple-700 shadow-md hover:shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .card {
+    @apply bg-darker rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-purple-800;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-r from-dark to-deepPurple;
+  }
+} 
